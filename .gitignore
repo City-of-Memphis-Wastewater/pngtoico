@@ -11,3 +11,6 @@ wheels/
 
 # Exports
 *.ico
+
+# Imports
+*.png
