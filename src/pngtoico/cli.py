@@ -16,8 +16,8 @@ def convert(
         [16, 32, 48, 64, 128, 256], 
         "--size", "-s", 
         help="Resolutions to generate"
-    ),
-    remove_bg: bool = typer.Option(False, "--remove-bg", help="Enable experimental white-background removal")
+    )
+    #remove_bg: bool = typer.Option(False, "--remove-bg", help="Enable experimental white-background removal")
 ):
     """
     Generate a set of individual .ico files with clean naming.
@@ -26,8 +26,8 @@ def convert(
     target_dir = output or Path.cwd()
     
     try:
-        typer.echo(f"🚀 Processing: {input_file.name} (Remove BG: {remove_bg})")
-        created = convert_png_to_ico_collection(input_file, target_dir, sizes, remove_bg)
+        typer.echo(f"🚀 Processing: {input_file.name}")
+        created = convert_png_to_ico_collection(input_file, target_dir, sizes)
         
         for p in created:
             typer.secho(f"  CLEAN: {p.name}", fg=typer.colors.CYAN)

@@ -5,11 +5,12 @@ def convert_png_to_ico_collection(
     input_path: Path, 
     output_dir: Path, 
     sizes: list[int], 
-    remove_bg: bool = False
+    #remove_bg: bool = False
 ) -> list[Path]:
     img = Image.open(input_path).convert("RGBA")
-    
-    if remove_bg:
+
+    # broken, sucks
+    if False:# remove_bg:
         # Only run this if explicitly requested
         white_thresh = 245
         grayscale = img.convert("L")
