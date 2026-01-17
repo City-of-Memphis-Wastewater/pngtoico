@@ -1,0 +1,23 @@
+[project]
+name = "pngtoico"
+version = "0.1.1"
+description = "Strip the background from PNG files and gerenate several ico files at once."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=12.1.0",
+    "typer>=0.21.1",
+]
+[project.scripts]
+pyhabitat = "pyhabitat.cli:run_cli"
+pngtoico = "pngtoico.cli:app"
+
+[dependency-groups]
+dev = [
+    "uv>=0.5.0",
+    "pyinstaller>=6.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
