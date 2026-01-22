@@ -1,6 +1,6 @@
 [project]
 name = "pngtoico"
-version = "0.1.1"
+version = "0.1.2"
 description = "Strip the background from PNG files and gerenate several ico files at once."
 readme = "README.md"
 requires-python = ">=3.12"
